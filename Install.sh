@@ -4,3 +4,7 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/r
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/nvim.sh)
 
 sudo apt autoremove
+
+zsh
+
+#source $HOME/.zshrc
