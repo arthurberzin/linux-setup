@@ -3,3 +3,4 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/z
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/ranger.sh)
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/nvim.sh)
 
+sudo apt autoremove
