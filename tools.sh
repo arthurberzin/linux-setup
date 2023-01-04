@@ -6,7 +6,7 @@ echo "==========================================================================
 sudo apt-get install -y caca-utils 
 sudo 4
  install -s -f ghostscript  
-sudo brew install -s -f imagemagick  
+brew install -f imagemagick  
 sudo apt-get install -y librsvg2-bin  
 sudo apt-get install -y ffmpeg  
 sudo apt-get install -y highlight  
@@ -26,11 +26,11 @@ sudo apt-get install -y fontforge
 sudo apt-get install -y openscad 
 sudo apt-get install -y python3-neovim 
 sudo apt-get install -y python-jedi 
-sudo brew install -s -f lazygit  
-sudo brew install -s -f lazydocker 
-sudo brew install -s -f bpytop 
-sudo brew install -s -f ncdu 
-sudo brew install -s -f hashicorp/tap/terraform-ls 
+brew install -f lazygit  
+brew install -f lazydocker 
+brew install -f bpytop 
+brew install -f ncdu 
+brew install -f hashicorp/tap/terraform-ls 
 pip3 install jedi --quiet 
 sudo apt-get install -y exuberant-ctags 
 

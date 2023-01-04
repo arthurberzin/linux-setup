@@ -1,5 +1,5 @@
 echo "---------------------- install gcc ------------------------"
-sudo brew install -s -f gcc  
+brew install -f gcc  
 
 sudo apt-get update 
 #sudo apt-get install -y git 
