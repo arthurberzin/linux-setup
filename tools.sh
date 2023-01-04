@@ -4,8 +4,7 @@ echo "==========================================================================
 
 
 sudo apt-get install -y caca-utils 
-sudo 4
- install -s -f ghostscript  
+brew install -f ghostscript  
 brew install -f imagemagick  
 sudo apt-get install -y librsvg2-bin  
 sudo apt-get install -y ffmpeg  
