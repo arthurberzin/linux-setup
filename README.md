@@ -14,17 +14,17 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile 
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile &&
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
-##### restart
+###### restart
 
 ## Part I
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partI.sh)
 ```
-##### restart
+###### restart
 ## Part II
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partII.sh)
 ```
-##### restart
+###### restart
