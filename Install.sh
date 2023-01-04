@@ -1,1 +1,1 @@
-bash <(curl -s https://github.com/arthurberzin/linux-setup/blob/main/tools.sh)
+bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/tools.sh)
