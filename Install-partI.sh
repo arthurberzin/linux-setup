@@ -1,23 +1,13 @@
-
-echo "------------------------ Homebrew ------------------------"
-bash -c "$(curl --silent -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-
-echo "------------------------ set brew shellenv ------------------------"
-
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile &&
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile &&
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-echo "------------------------ brew install gcc ------------------------"
+echo "---------------------- install gcc ------------------------"
 sudo brew install -s -f gcc  
 
 sudo apt-get update 
 #sudo apt-get install -y git 
+echo "------------------------ build-essential ------------------------"
 sudo apt-get install -y build-essential 
 #sudo apt install -y nodejs 
 #sudo apt-get install -y curl 
-
+echo "------------------------ python ------------------------"
 sudo apt-get install -y python2  
 sudo apt-get install -y python3  
 sudo apt-get install -y python-pip 
