@@ -3,9 +3,9 @@ echo "============================================== Install Tools =============
 echo "================================================================================================================"
 
 sudo apt-get update;
-sudo apt-get install -y git;
+#sudo apt-get install -y git;
 sudo apt-get install -y build-essential;
-sudo apt-get install -y curl;
+#sudo apt-get install -y curl;
 
 sudo apt-get install -y python2 ;
 sudo apt-get install -y python3 ;
