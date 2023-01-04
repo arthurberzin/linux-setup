@@ -25,11 +25,14 @@ sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | 
 
 echo "------------------------ Install Dotnet  ------------------------"
 
-sudo rm /var/lib/dpkg/lock-frontend 
+ 
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&
-sudo dpkg -i packages-microsoft-prod.deb &&
-rm packages-microsoft-prod.deb 
+echo "--- sleep 20 ---" &&
+sleep 20
 
+sudo rm /var/lib/dpkg/lock-frontend
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
 sudo rm /var/cache/apt/archives/lock 
 
 sudo apt-get update &&
