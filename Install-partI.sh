@@ -1,4 +1,5 @@
 echo "---------------------- install gcc ------------------------"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew install -f gcc  
 
 sudo apt-get update 
