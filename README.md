@@ -1,4 +1,4 @@
-# Linux setup
+# Ubuntu setup
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git && sudo apt-get install -y curl;
