@@ -28,7 +28,7 @@ echo "------------------------ Install Dotnet  ------------------------"
 
  
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&
-echo "--- sleep 20 ---" &&
+echo "--- wait 20 seconds ---" &&
 sleep 20
 
 sudo rm /var/lib/dpkg/lock-frontend
