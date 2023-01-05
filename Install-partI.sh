@@ -35,7 +35,7 @@ echo "------------------------ Install Dotnet  ------------------------"
 
  
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&
-echo "--- wait 20 seconds ---" &&
+echo "--- wait 40 seconds ---" &&
 sleep 40
 
 sudo rm /var/cache/apt/archives/lock 

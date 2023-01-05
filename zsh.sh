@@ -44,6 +44,8 @@ echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.zshrc
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $HOME/.zshrc 
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $HOME/.zshrc 
 echo ' ' >> $HOME/.zshrc 
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zshrc
+echo ' ' >> $HOME/.zshrc 
 echo 'clear' >> $HOME/.zshrc 
 echo 'cd ~' >> $HOME/.zshrc 
 
