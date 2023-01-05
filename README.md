@@ -14,15 +14,15 @@ echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile 
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile &&
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
-###### restart
+###### May need restart
 
-## Part I
+## Install Base (nvm, dotnet, gcc, python, build-essential)
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partI.sh)
 ```
 ###### restart
-## Part II
+## Install Common (tool set, zsh, ranger, nvim)
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partII.sh)
