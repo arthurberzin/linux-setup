@@ -34,6 +34,10 @@ pip3 install jedi --quiet
 sudo apt-get install -y exuberant-ctags 
 
 echo "------------------------ Install npm , pyright, yarn, Nerd Font 'Source Code Pro' ------------------------"
+echo "--- wait 40 seconds ---" &&
+sleep 40
+
+source $HOME/.profile 
 nvm install --lts 
 npm i --silent --global pyright 
 npm install --silent --global yarn 

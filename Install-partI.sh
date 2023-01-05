@@ -31,8 +31,10 @@ echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $HO
 echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.profile 
 echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $HOME/.profile 
 echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $HOME/.profile 
-echo "------------------------ Install Dotnet  ------------------------"
 
+source $HOME/.profile 
+
+echo "------------------------ Install Dotnet  ------------------------"
  
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&
 echo "--- wait 40 seconds ---" &&
@@ -46,3 +48,4 @@ rm packages-microsoft-prod.deb
 
 sudo apt-get update &&
 sudo apt-get install -y dotnet-sdk-7.0 
+
