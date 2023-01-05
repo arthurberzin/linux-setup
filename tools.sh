@@ -33,11 +33,11 @@ brew install -f hashicorp/tap/terraform-ls
 pip3 install jedi --quiet 
 sudo apt-get install -y exuberant-ctags 
 
-echo "------------------------ Install npm , pyright, yarn ------------------------"
+echo "------------------------ Install npm , pyright, yarn, Nerd Font 'Source Code Pro' ------------------------"
 nvm install --lts 
 npm i --silent --global pyright 
 npm install --silent --global yarn 
-
+npm install --silent --global git://github.com/adobe-fonts/source-code-pro.git#release
 
 echo "------------------------ Install csharp-ls  ------------------------"
 sudo dotnet tool install --global csharp-ls 
