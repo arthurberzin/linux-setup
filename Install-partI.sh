@@ -23,7 +23,14 @@ sudo apt-get install -y python3-pip
 echo "------------------------ install nvm ------------------------"
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash 
 
+echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.bashrc 
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $HOME/.bashrc 
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $HOME/.bashrc 
 
+
+echo 'export NVM_DIR="$HOME/.nvm"' >> $HOME/.profile 
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> $HOME/.profile 
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> $HOME/.profile 
 echo "------------------------ Install Dotnet  ------------------------"
 
  

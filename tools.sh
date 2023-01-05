@@ -41,7 +41,3 @@ npm install --silent --global yarn
 
 echo "------------------------ Install csharp-ls  ------------------------"
 sudo dotnet tool install --global csharp-ls 
-
-#brew not found
-#dotnet-sdk-7.0 not found
-#dotnet not found
