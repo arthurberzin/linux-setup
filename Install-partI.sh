@@ -36,12 +36,13 @@ echo "------------------------ Install Dotnet  ------------------------"
  
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb &&
 echo "--- wait 20 seconds ---" &&
-sleep 20
+sleep 30
 
+sudo rm /var/cache/apt/archives/lock 
+sudo rm /var/lib/dpkg/lock
 sudo rm /var/lib/dpkg/lock-frontend
 sudo dpkg -i packages-microsoft-prod.deb
 rm packages-microsoft-prod.deb
-sudo rm /var/cache/apt/archives/lock 
 
 sudo apt-get update &&
 sudo apt-get install -y dotnet-sdk-7.0 
