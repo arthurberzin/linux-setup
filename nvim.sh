@@ -21,7 +21,7 @@ mkdir .confi
 cd .config  
 mkdir nvim  
 cd ~  
-git clone https://github.com/arthurberzin/vim ~/.config/nvim  
+git clone https://github.com/arthurberzin/nvim ~/.config/nvim  
 
 
 nvim +':PlugInstall --sync' +qa  
