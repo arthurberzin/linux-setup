@@ -5,9 +5,8 @@ echo "==========================================================================
 #https://github.com/neovim/neovim/wiki/Installing-Neovim#debian
 #sudo apt-get install -y neovim  
 
-
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage 
-chmod u+x nvim.appimage 
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage &&
+chmod u+x nvim.appimage &&
 ./nvim.appimage --appimage-extract 
 ./squashfs-root/AppRun --version 
 sudo mv squashfs-root /  
