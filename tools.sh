@@ -24,7 +24,7 @@ pip install nbconvert --quiet
 sudo apt-get install -y fontforge  
 sudo apt-get install -y openscad 
 sudo apt-get install -y python3-neovim 
-sudo apt-get install -y python-jedi 
+sudo apt-get install -y python-jedi # no candidate
 brew install -f lazygit  
 brew install -f lazydocker 
 brew install -f bpytop 
