@@ -122,10 +122,11 @@ sudo apt-get install -y exuberant-ctags
 
 
 echo "------------------------ Install npm , pyright, yarn, Nerd Font 'Source Code Pro' ------------------------"
-echo "--- wait 40 seconds ---" &&
-sleep 40
 
 source $HOME/.profile  
+
+echo "--- wait 40 seconds ---" &&
+sleep 40
 
 echo "=========================nvm install  ==================================="
 nvm install --lts 
