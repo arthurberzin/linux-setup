@@ -1,30 +1,16 @@
 # Ubuntu setup
 
-## Install [Brew](https://brew.sh/)
+## Install Base ( [Brew](https://brew.sh/), [Nerd Forn](https://www.nerdfonts.com/#home), ...)
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git && sudo apt-get install -y curl;
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install.sh)
 ```
-
-###### Set env var
 
 ```bash
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.profile &&
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.zprofile &&
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/nvim.sh)
 ```
-###### May need restart
-
-## Install Base (nvm, dotnet, gcc, python, build-essential)
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partI.sh)
+bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/zsh.sh)
 ```
-###### restart
-## Install Common (tool set, zsh, ranger, nvim)
-
-```bash
-bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/Install-partII.sh)
-```
-###### restart
