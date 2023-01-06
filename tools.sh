@@ -150,24 +150,3 @@ sudo add-apt-repository -y ppa:daniel-milde/gdu && sudo apt-get update && sudo a
 echo "========================= bottom  ==================================="
 brew install bottom
 
-
-
-echo "================================================================================================================"
-echo "==============================================       LSP     ==================================================="
-echo "================================================================================================================"
-
-echo " "
-echo "------------------------ Install csharp-ls  ------------------------"
-sudo dotnet tool install --global csharp-ls 
-
-
-echo "=========================terraform-ls==================================="
-brew install -f hashicorp/tap/terraform-ls 
-
-
-echo "========================= lua-language-server  ==================================="
-brew install lua-language-server
-
-
-echo "========================= typescript typescript-language-server  ==================================="
-npm install --silent -g typescript typescript-language-server

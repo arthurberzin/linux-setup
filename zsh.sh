@@ -14,7 +14,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 export TERM=xterm-256color
 
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 zstyle ":omz:update" mode auto 
 zstyle ":omz:update" frequency 30
 ENABLE_CORRECTION="true"
