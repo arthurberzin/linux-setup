@@ -4,6 +4,10 @@ echo "==========================================================================
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 source $HOME/.profile 
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 echo " "
 echo "======================caca-utils============================"
 sudo apt-get install -y caca-utils 
@@ -121,7 +125,7 @@ echo "------------------------ Install npm , pyright, yarn, Nerd Font 'Source Co
 echo "--- wait 40 seconds ---" &&
 sleep 40
 
-source $HOME/.profile 
+source $HOME/.profile  
 
 echo "=========================nvm install  ==================================="
 nvm install --lts 
