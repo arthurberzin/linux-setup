@@ -186,3 +186,10 @@ brew install -f angular-cli
 
 echo "========================= nuget  ==================================="
 sudo apt install -y nuget
+
+echo "========================= nuget  ==================================="
+sudo apt install -y golang-go
+
+
+echo "========================= Install Rust and Cargo  ==================================="
+curl https://sh.rustup.rs -sSf | sh -s -- -y

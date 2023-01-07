@@ -68,6 +68,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+
+source "$HOME/.cargo/env"
+
 clear
 cd ~
 
