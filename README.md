@@ -1,6 +1,6 @@
 # Ubuntu setup
 
-#### Install Base ( [Brew](https://brew.sh/), , ...)
+#### Install Common
 
 ```bash
 sudo apt-get update && sudo apt-get install -y git && sudo apt-get install -y curl &&
