@@ -7,7 +7,7 @@ echo "==========================================================================
 # Update zshrc
 cat <<EOT >>$HOME/.zshrc
 
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="\$HOME/.oh-my-zsh"
 
 export TERM=xterm-256color
 
@@ -36,7 +36,7 @@ plugins=(
     kubectl 
     minikube )
 
-export PATH="/usr/local/bin/w3mimgdisplayr:$PATH"
+export PATH="/usr/local/bin/w3mimgdisplayr:\$PATH"
 
 EOT
 
@@ -51,19 +51,19 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma-continuum/fast-syntax-highlighting
 
-source $ZSH/oh-my-zsh.sh
+source \$ZSH/oh-my-zsh.sh
 
 export VISUAL=nvim 
 export EDITOR=nvim
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="\$HOME/.nvm"
+[ -s "\$NVM_DIR/nvm.sh" ] && \. "\$NVM_DIR/nvm.sh"
+[ -s "\$NVM_DIR/bash_completion" ] && \. "\$NVM_DIR/bash_completion"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
-source "$HOME/.cargo/env"
+source "\$HOME/.cargo/env"
 
 clear
 cd ~
