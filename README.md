@@ -15,6 +15,8 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/I
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/nvim.sh)
 ```
 
+###### run `nvim` to complete setting up
+
 #### Install Zsh
 
 ```bash
