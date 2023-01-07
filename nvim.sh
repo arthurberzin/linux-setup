@@ -30,6 +30,8 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 echo "============================ Get Astrivim =======================================#"
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
+# sudo rm -rf ~/.config/nvim
+
 echo "============================ Setting Up =======================================#"
 #https://astronvim.github.io/#-setup
 mkdir ~/.config/nvim/lua/user/

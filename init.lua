@@ -55,6 +55,7 @@ local config = {
       wrap = false, -- sets vim.opt.wrap
     },
     g = {
+      termguicolors = false,
       mapleader = " ", -- sets vim.g.mapleader
       autoformat_enabled = true, -- enable or disable auto formatting at start (lsp.formatting.format_on_save must be enabled)
       cmp_enabled = true, -- enable completion at start
@@ -63,7 +64,7 @@ local config = {
       status_diagnostics_enabled = true, -- enable diagnostics in statusline
       icons_enabled = true, -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
       ui_notifications_enabled = true, -- disable notifications when toggling UI elements
-      heirline_bufferline = false, -- enable new heirline based bufferline (requires :PackerSync after changing)
+      heirline_bufferline = true, -- enable new heirline based bufferline (requires :PackerSync after changing)
     },
   },
   -- If you need more control, you can use the function()...end notation
@@ -94,7 +95,7 @@ local config = {
     -- Modify the color palette for the default theme
     colors = {
       fg = "#abb2bf",
-      bg = "#1e222a",
+       bg = "#535254", --"#1e222a",
     },
     highlights = function(hl) -- or a function that returns a new table of colors to set
       local C = require "default_theme.colors"
@@ -120,9 +121,9 @@ local config = {
       hop = false,
       indent_blankline = true,
       lightspeed = false,
-      ["neo-tree"] = true,
+      ["neo-tree"] = false,
       notify = true,
-      ["nvim-tree"] = false,
+      ["nvim-tree"] = true,
       ["nvim-web-devicons"] = true,
       rainbow = true,
       symbols_outline = false,
@@ -245,24 +246,24 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
-      { "xiyaowong/nvim-transparent",
-        config = function ()
-          require("transparent").setup({
-            enable = true, -- boolean: enable transparent
-            extra_groups = { -- table/string: additional groups that should be cleared
-              -- In particular, when you set it to 'all', that means all available groups
-              -- example of akinsho/nvim-bufferline.lua
-              "BufferLineTabClose",
-              "BufferlineBufferSelected",
-              "BufferLineFill",
-              "BufferLineBackground",
-              "BufferLineSeparator",
-              "BufferLineIndicatorSelected",
-            },
-            exclude = {}, -- table: groups you don't want to clear
-          })
-        end
-      }
+      -- { "xiyaowong/nvim-transparent",
+      --   config = function ()
+      --     require("transparent").setup({
+      --       enable = true, -- boolean: enable transparent
+      --       extra_groups = { -- table/string: additional groups that should be cleared
+      --         -- In particular, when you set it to 'all', that means all available groups
+      --         -- example of akinsho/nvim-bufferline.lua
+      --         "BufferLineTabClose",
+      --         "BufferlineBufferSelected",
+      --         "BufferLineFill",
+      --         "BufferLineBackground",
+      --         "BufferLineSeparator",
+      --         "BufferLineIndicatorSelected",
+      --       },
+      --       exclude = {}, -- table: groups you don't want to clear
+      --     })
+      --   end
+      -- }
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       -- { "andweeb/presence.nvim" },
@@ -387,11 +388,57 @@ local config = {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+
+
+    vim.cmd("hi CursorLine guifg=White guibg=#686148 gui=none");
+    vim.cmd("hi Title guibg=NONE ctermbg=NONE");
+    vim.cmd("hi StatusLine guibg=#58523d ctermbg=NONE");
+    vim.cmd("hi StatusLineNC guibg=#58523d ctermbg=NONE");
+
+  
+
+    vim.cmd("hi Visual guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Folded guibg=NONE ctermbg=NONE");
+
+
     vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
+
+    vim.cmd("hi Pmenu ctermfg=NONE guibg=NONE ctermbg=8");
+    vim.cmd("hi PmenuSel ctermfg=NONE guibg=NONE ctermbg=8");
+
+
+    vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi TelescopePreviewNormal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi TelescopePromptNormal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi TelescopeResultsNormal guibg=NONE ctermbg=NONE");
+
+    vim.cmd("hi Float guibg=NONE ctermbg=NONE");
+    vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE");
+
     vim.cmd("hi EndOfBuffer guibg=NONE ctermbg=NONE");
     vim.cmd("hi NonText guibg=NONE ctermbg=NONE");
-    vim.cmd("hi Pmenu ctermfg=white ctermbg=8");
-    vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NormalNC guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Comment guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Constant guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Special guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Identifier guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Statement guibg=NONE ctermbg=NONE");
+    vim.cmd("hi PreProc guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Type guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Underlined guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Todo guibg=NONE ctermbg=NONE");
+    vim.cmd("hi String guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Function guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Conditional guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Repeat guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Operator guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Structure guibg=NONE ctermbg=NONE");
+    vim.cmd("hi LineNr guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NonText guibg=NONE ctermbg=NONE");
+    vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE");
+    vim.cmd("hi CursorLineNr guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Neotree guibg=NONE ctermbg=NONE");    
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
