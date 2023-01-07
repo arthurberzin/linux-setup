@@ -2,7 +2,7 @@ echo "==========================================================================
 echo "============================================== Install Tools ==================================================="
 echo "================================================================================================================"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-source $HOME/.profile 
+source $HOME/.profile
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
@@ -10,163 +10,129 @@ export NVM_DIR="$HOME/.nvm"
 
 echo " "
 echo "======================caca-utils============================"
-sudo apt-get install -y caca-utils 
-
+sudo apt-get install -y caca-utils
 
 echo "======================ghostscript=============================="
-brew install -f ghostscript  
-
+brew install -f ghostscript
 
 echo "======================imagemagick=============================="
-brew install -f imagemagick  
-
+brew install -f imagemagick
 
 echo "======================librsvg2-bin  ======================================"
-sudo apt-get install -y librsvg2-bin  
-
+sudo apt-get install -y librsvg2-bin
 
 echo "=========================ffmpeg==================================="
-sudo apt-get install -y ffmpeg  
-
+sudo apt-get install -y ffmpeg
 
 echo "===========================highlight================================="
-sudo apt-get install -y highlight  
-
+sudo apt-get install -y highlight
 
 echo "======================atool======================================"
-sudo apt-get install -y atool 
-
+sudo apt-get install -y atool
 
 echo "======================tar======================================"
-sudo apt-get install -y tar  
-
+sudo apt-get install -y tar
 
 echo "=======================unrar====================================="
-sudo apt-get install -y unrar  
-
+sudo apt-get install -y unrar
 
 echo "========================w3m===================================="
-sudo apt-get install -y w3m  
-
+sudo apt-get install -y w3m
 
 echo "=========================poppler-utils  ==================================="
-sudo apt-get install -y poppler-utils  
-
+sudo apt-get install -y poppler-utils
 
 echo "========================djvulibre-bin ===================================="
-sudo apt-get install -y djvulibre-bin 
+sudo apt-get install -y djvulibre-bin
 
-
-echo "========================calibre ====================================" 
-sudo apt-get install -y calibre  
-
+echo "========================calibre ===================================="
+sudo apt-get install -y calibre
 
 echo "=========================mediainfo ==================================="
-sudo apt-get install -y mediainfo 
+sudo apt-get install -y mediainfo
 
-
-echo "=========================odt2txt===================================" 
-sudo apt-get install -y odt2txt  
-
+echo "=========================odt2txt==================================="
+sudo apt-get install -y odt2txt
 
 echo "=======================jq====================================="
-sudo apt-get install -y jq  
-
+sudo apt-get install -y jq
 
 echo "=======================jupyterlab====================================="
-pip install jupyterlab --quiet 
-
+pip install jupyterlab --quiet
 
 echo "========================nbconvert===================================="
-pip install nbconvert --quiet 
-
+pip install nbconvert --quiet
 
 echo "===========================fontforge================================="
-sudo apt-get install -y fontforge 
+sudo apt-get install -y fontforge
 
-
-echo "=========================openscad===================================" 
-sudo apt-get install -y openscad 
-
+echo "=========================openscad==================================="
+sudo apt-get install -y openscad
 
 echo "====================python3-neovim ========================================"
-sudo apt-get install -y python3-neovim 
-
+sudo apt-get install -y python3-neovim
 
 echo "========================python-jedi===================================="
 sudo apt-get install -y python-jedi # no candidate
 
-
 echo "======================lazygit======================================"
-brew install -f lazygit  
-
+brew install -f lazygit
 
 echo "=========================lazydocker==================================="
-brew install -f lazydocker 
-
+brew install -f lazydocker
 
 echo "========================bpytop===================================="
-brew install -f bpytop 
-
+brew install -f bpytop
 
 echo "========================ncdu===================================="
-brew install -f ncdu 
-
+brew install -f ncdu
 
 echo "=======================jedi====================================="
-pip3 install jedi --quiet 
-
+pip3 install jedi --quiet
 
 echo "=========================exuberant-ctags ==================================="
-sudo apt-get install -y exuberant-ctags 
-
+sudo apt-get install -y exuberant-ctags
 
 echo "------------------------ Install npm , pyright, yarn, Nerd Font 'Source Code Pro' ------------------------"
 
-source $HOME/.profile  
+source $HOME/.profile
 
 echo "--- wait 40 seconds ---" &&
-sleep 40
+    sleep 40
 
 echo "=========================nvm install  ==================================="
-nvm install --lts 
-
+nvm install --lts
 
 echo "=========================npm pyright  ==================================="
-npm i --silent --global pyright 
-
+npm i --silent --global pyright
 
 echo "=========================npm yarn  ==================================="
-npm install --silent --global yarn 
-
+npm install --silent --global yarn
 
 echo "========================= npm source-code-pro Nerd Font  ==================================="
 npm install --silent --global git://github.com/adobe-fonts/source-code-pro.git#release
 
-
 echo "========================= tree-sitter-cli ==================================="
 npm install --silent tree-sitter-cli
 
-
 echo "========================= gdu  ==================================="
 sudo add-apt-repository -y ppa:daniel-milde/gdu && sudo apt-get update && sudo apt-get install -y gdu
-
 
 echo "========================= bottom  ==================================="
 brew install -f bottom
 
 echo "========================= terraform  ==================================="
-echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-    sudo tee /etc/apt/sources.list.d/hashicorp.list
+#echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+#    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+#    sudo tee /etc/apt/sources.list.d/hashicorp.list
 
-sudo apt update
-sudo apt install -y terraform
+#sudo apt update
+#sudo apt install -y terraform
+sudo snap install terraform --classic
 
 echo "========================= Docker  ==================================="
 curl -fsSL https://get.docker.com -o get-docker.sh
 DRY_RUN=1 sudo sh ./get-docker.sh
-
 
 echo "========================= kubectl  ==================================="
 brew install -f kubectl
@@ -176,7 +142,6 @@ brew install -f minikube
 
 echo "========================= Azure Cli  ==================================="
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
-
 
 echo "========================= Lua  ==================================="
 sudo apt install -y lua5.3
@@ -189,7 +154,6 @@ sudo apt install -y nuget
 
 echo "========================= go  ==================================="
 sudo apt install -y golang-go
-
 
 echo "========================= Install Rust and Cargo  ==================================="
 curl https://sh.rustup.rs -sSf | sh -s -- -y
