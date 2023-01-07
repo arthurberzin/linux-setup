@@ -40,6 +40,13 @@ local config = {
   -- set vim options here (vim.<first_key>.<second_key> = value)
   options = {
     opt = {
+      autoindent = true,
+      tabstop=4,
+      shiftwidth=4,
+      smarttab = true,
+      softtabstop=4,
+      mouse="a",
+      encoding='UTF-8',
       -- set to true or false etc.
       relativenumber = true, -- sets vim.opt.relativenumber
       number = true, -- sets vim.opt.number
@@ -238,7 +245,24 @@ local config = {
     init = {
       -- You can disable default plugins as follows:
       -- ["goolord/alpha-nvim"] = { disable = true },
-
+      { "xiyaowong/nvim-transparent",
+        config = function ()
+          require("transparent").setup({
+            enable = true, -- boolean: enable transparent
+            extra_groups = { -- table/string: additional groups that should be cleared
+              -- In particular, when you set it to 'all', that means all available groups
+              -- example of akinsho/nvim-bufferline.lua
+              "BufferLineTabClose",
+              "BufferlineBufferSelected",
+              "BufferLineFill",
+              "BufferLineBackground",
+              "BufferLineSeparator",
+              "BufferLineIndicatorSelected",
+            },
+            exclude = {}, -- table: groups you don't want to clear
+          })
+        end
+      }
       -- You can also add new plugins here as well:
       -- Add plugins, the packer syntax without the "use"
       -- { "andweeb/presence.nvim" },
@@ -363,6 +387,11 @@ local config = {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi EndOfBuffer guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NonText guibg=NONE ctermbg=NONE");
+    vim.cmd("hi Pmenu ctermfg=white ctermbg=8");
+    vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
@@ -377,5 +406,7 @@ local config = {
     -- }
   end,
 }
+
+
 
 return config
