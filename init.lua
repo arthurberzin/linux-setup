@@ -70,7 +70,7 @@ local config = {
   -- end,
 
   -- Set dashboard header
-  header = {    
+  header = {
     "███████████                                                         █████    ",
     "░░███░░░░░███                                                       ░░███    ",
     " ░███    ░███     ██████     ████████      ██████      ████████     ███████  ",
@@ -288,7 +288,7 @@ local config = {
       ensure_installed = { "python", "go", "ccppr_vsc", "lua", "dnetcs", "chrome", "jsnode", "markdown" },
     },
   },
- 
+
   -- LuaSnip Options
   luasnip = {
     -- Extend filetypes
