@@ -153,5 +153,36 @@ sudo add-apt-repository -y ppa:daniel-milde/gdu && sudo apt-get update && sudo a
 
 
 echo "========================= bottom  ==================================="
-brew install bottom
+brew install -f bottom
 
+echo "========================= terraform  ==================================="
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+    sudo tee /etc/apt/sources.list.d/hashicorp.list
+
+sudo apt update
+sudo apt install -y terraform
+
+echo "========================= Docker  ==================================="
+curl -fsSL https://get.docker.com -o get-docker.sh
+DRY_RUN=1 sudo sh ./get-docker.sh
+
+
+echo "========================= kubectl  ==================================="
+brew install -f kubectl
+
+echo "========================= minikube  ==================================="
+brew install -f minikube
+
+echo "========================= Azure Cli  ==================================="
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+
+echo "========================= Lua  ==================================="
+sudo apt install -y lua5.3
+
+echo "========================= angular  ==================================="
+brew install -f angular-cli
+
+echo "========================= nuget  ==================================="
+sudo apt install -y nuget
