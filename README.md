@@ -21,7 +21,8 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/n
 #### Install Zsh
 
 ```bash
-sudo apt-get install -y zsh && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt-get install -y zsh &&
+ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ```bash
