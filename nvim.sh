@@ -29,7 +29,8 @@ git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
 echo "============================ Setting Up =======================================#"
 #https://astronvim.github.io/#-setup
-curl -o ~/.config/nvim/user https://raw.githubusercontent.com/arthurberzin/linux-setup/main/init.lua
+mkdir ~/.config/nvim/lua/user/
+curl -o ~/.config/nvim/lua/user/init.lua https://raw.githubusercontent.com/arthurberzin/linux-setup/main/init.lua
 
 
 echo "========================= LspInstall  ==================================="

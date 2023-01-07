@@ -288,10 +288,7 @@ local config = {
       ensure_installed = { "python", "go", "ccppr_vsc", "lua", "dnetcs", "chrome", "jsnode", "markdown" },
     },
   },
-
-  
-
-5
+ 
   -- LuaSnip Options
   luasnip = {
     -- Extend filetypes
