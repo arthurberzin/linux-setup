@@ -1,6 +1,12 @@
 echo "================================================================================================================"
 echo "============================================== Install nvim   =================================================="
 echo "================================================================================================================"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+source $HOME/.profile
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 source "$HOME/.cargo/env"
 
@@ -24,20 +30,14 @@ mv ~/.cache/nvim ~/.cache/nvim.bak
 echo "============================ Get Astrivim =======================================#"
 git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
 
-
-
 echo "============================ Setting Up =======================================#"
 #https://astronvim.github.io/#-setup
 mkdir ~/.config/nvim/lua/user/
 curl -o ~/.config/nvim/lua/user/init.lua https://raw.githubusercontent.com/arthurberzin/linux-setup/main/init.lua
 
-
 #echo "========================= LspInstall  ==================================="
 #https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
 # nvim +':LspInstall pyright angularls arduino_language_server asm_lsp astro clangd csharp_ls omnisharp cssls dockerls eslint graphql html jsonls tsserver sumneko_lua marksman sqls tailwindcss terraformls lemminx yamlls'
-
-
-
 
 #echo "========================= TsInstall  ==================================="
 #nvim-treesitter
@@ -50,17 +50,12 @@ curl -o ~/.config/nvim/lua/user/init.lua https://raw.githubusercontent.com/arthu
 #https://github.com/ravenxrz/DAPInstall.nvim#list-of-debuggers
 # nvim +':DapInstall ccppr_vsc lua dnetcs chrome jsnode markdown' +qa
 
-
 #echo "========================= PackerSync  ==================================="
 
 #nvim +':PackerSync'
 
-
 #echo "========================= AstroUpdate  ==================================="
 #nvim +':AstroUpdate'
-
-
-
 
 echo "-----------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------

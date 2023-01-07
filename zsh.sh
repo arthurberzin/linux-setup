@@ -3,12 +3,12 @@ echo "============================================== Install zsh   =============
 echo "================================================================================================================"
 
 #install zsh
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y zsh 
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y zsh
 
-: > $HOME/.zshrc  
+: >$HOME/.zshrc
 
 # Update zshrc
-cat <<EOT >> $HOME/.zshrc
+cat <<EOT >>$HOME/.zshrc
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -43,14 +43,11 @@ export PATH="/usr/local/bin/w3mimgdisplayr:$PATH"
 
 EOT
 
-
-
 #Install zinit
-bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)" 
-
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 
 # Update zshrc
-cat <<EOT >> $HOME/.zshrc
+cat <<EOT >>$HOME/.zshrc
 
 zinit load zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
@@ -76,6 +73,5 @@ cd ~
 
 EOT
 
-
 #Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
