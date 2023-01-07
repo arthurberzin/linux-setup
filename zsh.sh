@@ -2,6 +2,9 @@ echo "==========================================================================
 echo "============================================== Install zsh   ==================================================="
 echo "================================================================================================================"
 
+#Install zsh and ohmyzsh
+sudo apt-get install -y zsh && sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 : >$HOME/.zshrc
 
 # Update zshrc
@@ -69,6 +72,3 @@ clear
 cd ~
 
 EOT
-
-#Install ohmyzsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
