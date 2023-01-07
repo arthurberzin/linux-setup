@@ -21,6 +21,6 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/n
 #### Install Zsh
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install -y zsh &&
+sudo apt-get install -y zsh &&
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/zsh.sh)
 ```
