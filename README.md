@@ -12,6 +12,7 @@ bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/I
 #### Install Neovim
 
 ```bash
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" &&
 bash <(curl -s https://raw.githubusercontent.com/arthurberzin/linux-setup/main/nvim.sh)
 ```
 
