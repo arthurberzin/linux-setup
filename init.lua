@@ -390,10 +390,10 @@ local config = {
   polish = function()
 
 
-    vim.cmd("hi CursorLine guifg=White guibg=#686148 gui=none");
+    vim.cmd("hi CursorLine guifg=White guibg=#7e8081 gui=none");
     vim.cmd("hi Title guibg=NONE ctermbg=NONE");
-    vim.cmd("hi StatusLine guibg=#58523d ctermbg=NONE");
-    vim.cmd("hi StatusLineNC guibg=#58523d ctermbg=NONE");
+    vim.cmd("hi StatusLine guibg=#535254 ctermbg=NONE");
+    vim.cmd("hi StatusLineNC guibg=#535254 ctermbg=NONE");
 
   
 
