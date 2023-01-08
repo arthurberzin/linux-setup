@@ -95,7 +95,7 @@ local config = {
     -- Modify the color palette for the default theme
     colors = {
       fg = "#abb2bf",
-       bg = "#535254", --"#1e222a",
+       bg = "#303841",
     },
     highlights = function(hl) -- or a function that returns a new table of colors to set
       local C = require "default_theme.colors"
@@ -232,6 +232,7 @@ local config = {
       ["<leader>bc"] = { "<cmd>BufferLinePickClose<cr>", desc = "Pick to close" },
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
+      ["<leader>td"] = { function() astronvim.toggle_term_cmd "lazydocker" end, desc = "ToggleTerm lazydocker" },
       -- quick save
       -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     },
@@ -349,7 +350,7 @@ local config = {
     --   tab = { "", "" },
     -- },
     -- -- Customize colors for each element each element has a `_fg` and a `_bg`
-    -- colors = function(colors)
+    -- col  ors = function(colors)
     --   colors.git_branch_fg = astronvim.get_hlgroup "Conditional"
     --   return colors
     -- end,
@@ -390,10 +391,10 @@ local config = {
   polish = function()
 
 
-    vim.cmd("hi CursorLine guifg=White guibg=#7e8081 gui=none");
+    --vim.cmd("hi CursorLine guifg=White guibg=#7e8081 gui=none");
     vim.cmd("hi Title guibg=NONE ctermbg=NONE");
-    vim.cmd("hi StatusLine guibg=#535254 ctermbg=NONE");
-    vim.cmd("hi StatusLineNC guibg=#535254 ctermbg=NONE");
+    --vim.cmd("hi StatusLine guibg=NONE ctermbg=NONE");
+    --vim.cmd("hi StatusLineNC guibg=NONE ctermbg=NONE");
 
   
 
@@ -402,10 +403,16 @@ local config = {
 
 
     vim.cmd("hi Normal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NormalBorder guifg=White guibg=NONE ctermbg=NONE");
 
     vim.cmd("hi Pmenu ctermfg=NONE guibg=NONE ctermbg=8");
     vim.cmd("hi PmenuSel ctermfg=NONE guibg=NONE ctermbg=8");
 
+    vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE");
+    vim.cmd("hi NvimTreeNormalBorder guifg=White guibg=NONE ctermbg=NONE");
+
+    vim.cmd("hi Neotree guibg=NONE ctermbg=NONE"); 
+    vim.cmd("hi NeotreeBorder guifg=White guibg=NONE ctermbg=NONE"); 
 
     vim.cmd("hi TelescopeNormal guibg=NONE ctermbg=NONE");
     vim.cmd("hi TelescopePreviewNormal guibg=NONE ctermbg=NONE");
@@ -413,7 +420,7 @@ local config = {
     vim.cmd("hi TelescopeResultsNormal guibg=NONE ctermbg=NONE");
 
     vim.cmd("hi Float guibg=NONE ctermbg=NONE");
-    vim.cmd("hi FloatBorder guibg=NONE ctermbg=NONE");
+    vim.cmd("hi FloatBorder guifg=White guibg=NONE ctermbg=NONE");
 
     vim.cmd("hi EndOfBuffer guibg=NONE ctermbg=NONE");
     vim.cmd("hi NonText guibg=NONE ctermbg=NONE");
@@ -436,9 +443,9 @@ local config = {
     vim.cmd("hi LineNr guibg=NONE ctermbg=NONE");
     vim.cmd("hi NonText guibg=NONE ctermbg=NONE");
     vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE");
-    vim.cmd("hi CursorLineNr guibg=NONE ctermbg=NONE");
-    vim.cmd("hi NvimTreeNormal guibg=NONE ctermbg=NONE");
-    vim.cmd("hi Neotree guibg=NONE ctermbg=NONE");    
+    vim.cmd("hi CursorLineNr guibg=NONE ctermbg=NONE");   
+
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {
