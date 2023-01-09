@@ -35,7 +35,7 @@ npm i --silent -g vscode-langservers-extracted
 npm i --silent -g vscode-languageclient
 
 echo "========================= html  ==================================="
-npm install --save vscode-html-languageservice
+npm install -g vscode-html-languageservice
 
 echo "========================= CSS/LESS/SAS  ==================================="
 npm install --silent --global vscode-css-languageserver-bin
